@@ -17,5 +17,7 @@
 # limitations under the License.
 #
 
-- name: Restart nova consoleauth
-  service: name={{ nova_consoleauth_service }} state=restarted
+- name: Install nova compute
+  yum: name="{{ item }}" state=present
+  with_items:
+    - openstack-nova-console
