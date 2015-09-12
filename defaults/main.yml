@@ -29,3 +29,6 @@ my_ip: "{{ ansible_eth0.ipv4.address }}"
 rabbit_hostname: localhost
 rabbit_pass: rabbit_pass_default
 rabbit_username: rabbit_username_default
+
+# Memcached
+memcached_servers: None

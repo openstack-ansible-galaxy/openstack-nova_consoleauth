@@ -37,5 +37,9 @@
     - section:  DEFAULT
       option:   consoleauth_manager
       value:    "{{ consoleauth_manager }}"
+    # Memcached
+    - section:  DEFAULT
+      option:   memcached_servers
+      value:    "{{ memcached_servers }}"
   notify:
     - Restart nova consoleauth
