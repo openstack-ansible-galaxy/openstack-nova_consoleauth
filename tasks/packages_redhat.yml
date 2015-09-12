@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-- name: Install nova compute
+- name: Install nova console
   yum: name="{{ item }}" state=present
   with_items:
     - openstack-nova-console
