@@ -23,7 +23,6 @@ Role Variables
 | `console_token_ttl` | `600` | How many seconds before deleting tokens ||
 | `consoleauth_manager` | `nova.consoleauth.manager.ConsoleAuthManager` | Manager for console auth ||
 
-
 ### RabbitMQ (must exist)
 
 | Name | Default value | Description | Note |
@@ -32,6 +31,11 @@ Role Variables
 | `rabbit_username` | `rabbit_username_default` | RabbitMQ username for glance ||
 | `rabbit_pass` | `rabbit_pass_default` | RabbitMQ password for glance. ||
 
+### Memcached
+
+| Name | Default value | Description | Note |
+|---  |---  |---  |--- |
+| `memcached_servers` | `None` | A comma delimited string of hostname:port combos where the Memcached service runs ||
 
 Dependencies
 ------------
