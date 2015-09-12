@@ -24,8 +24,3 @@ consoleauth_manager: nova.consoleauth.manager.ConsoleAuthManager
 
 # Common
 my_ip: "{{ ansible_eth0.ipv4.address }}"
-
-# RabbitMQ
-rabbit_hostname: localhost
-rabbit_pass: rabbit_pass_default
-rabbit_username: rabbit_username_default
