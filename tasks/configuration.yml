@@ -30,16 +30,16 @@
     # Nova consoleauth
     - section:  DEFAULT
       option:   console_public_hostname
-      value:    "{{ console_public_hostname }}"
+      value:    "{{ nova_consoleauth_public_hostname }}"
     - section:  DEFAULT
       option:   console_token_ttl
-      value:    "{{ console_token_ttl }}"
+      value:    "{{ nova_consoleauth_token_ttl }}"
     - section:  DEFAULT
       option:   consoleauth_manager
-      value:    "{{ consoleauth_manager }}"
+      value:    "{{ nova_consoleauth_manager }}"
     # Memcached
     - section:  DEFAULT
       option:   memcached_servers
-      value:    "{{ memcached_servers }}"
+      value:    "{{ nova_consoleauth_memcached_servers }}"
   notify:
     - Restart nova consoleauth
