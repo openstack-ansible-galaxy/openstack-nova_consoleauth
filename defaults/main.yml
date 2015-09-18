@@ -22,6 +22,9 @@ nova_consoleauth_public_hostname: localhost
 nova_consoleauth_token_ttl: 600
 nova_consoleauth_manager: nova.consoleauth.manager.ConsoleAuthManager
 
+# Database
+nova_consoleauth_database_url: sqlite:////var/lib/nova/nova.db
+
 # Common
 my_ip: "{{ ansible_eth0.ipv4.address }}"
 
