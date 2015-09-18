@@ -17,10 +17,10 @@
 # limitations under the License.
 #
 
-# Nova consoleauth
-console_public_hostname: localhost
-console_token_ttl: 600
-consoleauth_manager: nova.consoleauth.manager.ConsoleAuthManager
+# Nova consoleauthauth
+nova_consoleauth_public_hostname: localhost
+nova_consoleauth_token_ttl: 600
+nova_consoleauth_manager: nova.consoleauth.manager.ConsoleAuthManager
 
 # Common
 my_ip: "{{ ansible_eth0.ipv4.address }}"
@@ -31,4 +31,4 @@ rabbit_pass: rabbit_pass_default
 rabbit_username: rabbit_username_default
 
 # Memcached
-memcached_servers: None
+nova_consoleauth_memcached_servers: None

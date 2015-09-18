@@ -19,9 +19,9 @@ Role Variables
 | Name | Default value | Description | Note |
 |---  |---  |---  |--- |
 | `my_ip` | `{{ ansible_eth0.ipv4.address }}` | Management IP for nova-consoleauth ||
-| `console_public_hostname` | `localhost` | Publicly visible name for this console host ||
-| `console_token_ttl` | `600` | How many seconds before deleting tokens ||
-| `consoleauth_manager` | `nova.consoleauth.manager.ConsoleAuthManager` | Manager for console auth ||
+| `nova_consoleauth_public_hostname` | `localhost` | Publicly visible name for this console host ||
+| `nova_consoleauth_token_ttl` | `600` | How many seconds before deleting tokens ||
+| `nova_consoleauth_manager` | `nova.consoleauth.manager.ConsoleAuthManager` | Manager for console auth ||
 
 ### RabbitMQ (must exist)
 
@@ -35,12 +35,12 @@ Role Variables
 
 | Name | Default value | Description | Note |
 |---  |---  |---  |--- |
-| `memcached_servers` | `None` | A comma delimited string of hostname:port combos where the Memcached service runs ||
+| `nova_consoleauth_memcached_servers` | `None` | A comma delimited string of hostname:port combos where the Memcached service runs ||
 
 Dependencies
 ------------
 
-None.
+None
 
 Example Playbook
 ----------------
