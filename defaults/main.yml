@@ -29,9 +29,14 @@ nova_consoleauth_database_url: sqlite:////var/lib/nova/nova.db
 my_ip: "{{ ansible_eth0.ipv4.address }}"
 
 # RabbitMQ
-rabbit_hostname: localhost
-rabbit_pass: rabbit_pass_default
-rabbit_username: rabbit_username_default
+nova_consoleauth_rabbit_userid: rabbit_pass_default
+nova_consoleauth_rabbit_password: rabbit_username_default
+nova_consoleauth_rabbit_virtual_host: /
+nova_consoleauth_rabbit_retry_interval: 1
+nova_consoleauth_rabbit_host: localhost
+nova_consoleauth_rabbit_port: 5672
+nova_consoleauth_rabbit_hosts: "{{ nova_consoleauth_rabbit_host }}:{{ nova_consoleauth_rabbit_port }}"
+nova_consoleauth_rabbit_ha_queues: False
 
 # Memcached
 nova_consoleauth_memcached_servers: None
