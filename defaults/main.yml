@@ -26,7 +26,7 @@ nova_consoleauth_manager: nova.consoleauth.manager.ConsoleAuthManager
 nova_consoleauth_database_url: sqlite:////var/lib/nova/nova.db
 
 # Common
-my_ip: "{{ ansible_eth0.ipv4.address }}"
+nova_consoleauth_my_ip: "{{ ansible_eth0.ipv4.address }}"
 
 # RabbitMQ
 rabbit_hostname: localhost
