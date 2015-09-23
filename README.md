@@ -18,7 +18,8 @@ Role Variables
 
 | Name | Default value | Description | Note |
 |---  |---  |---  |--- |
-| `my_ip` | `{{ ansible_eth0.ipv4.address }}` | Management IP for nova-consoleauth ||
+| `nova_consoleauth_database_url` | `sqlite:////var/lib/nova/nova.sqlite` | Database URI ||
+| `nova_consoleauth_my_ip` | `{{ ansible_eth0.ipv4.address }}` | Management IP for nova-consoleauth ||
 | `nova_consoleauth_public_hostname` | `localhost` | Publicly visible name for this console host ||
 | `nova_consoleauth_token_ttl` | `600` | How many seconds before deleting tokens ||
 | `nova_consoleauth_manager` | `nova.consoleauth.manager.ConsoleAuthManager` | Manager for console auth ||
