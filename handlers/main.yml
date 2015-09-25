@@ -18,4 +18,4 @@
 #
 
 - name: Restart nova consoleauth
-  service: name={{ nova_consoleauth_service }} state=restarted
+  service: name={{ nova_consoleauth_service }} state=restarted enabled=yes
